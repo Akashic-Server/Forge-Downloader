@@ -34,7 +34,7 @@ jobs:
       run: cp forge*.jar server/
 
     - name: Download Forge files
-      run: cd server && java -jar forge*.jar --installServer && cd ..
+      run: cd server && java -jar forge*.jar --installServer && rm forge*installer && cd ..
 
     - uses: actions/upload-artifact@v2
       with:
